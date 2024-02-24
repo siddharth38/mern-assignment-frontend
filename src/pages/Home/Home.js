@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import { useTodos } from '../../context/TodosContext';
 import EditTask from '../../Components/EditTask';
-const api_base = 'http://localhost:3001';
+const api_base = 'https://mern-assignment-backend.onrender.com';
 
 function Home(props) {
 	const { todos, setTodos, blur, setblur, loading, setloading } = useTodos();

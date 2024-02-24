@@ -16,13 +16,17 @@ const EditTask = () => {
         setblur("blur");
         setloading("loader");
         if (editTask.text && editTask.description && editTask.due_date) {
-            API.put(`/todo/update/${editTask._id}`, editTask).then(res => res.json());
-            setblur("noblur");
-            setloading("noloader")
+            API.put(`/todo/update/${editTask._id}`, editTask).then(res => {
 
-            seteditPopup(false);
-            setvalues(false);
-            window.location.reload();
+                setblur("noblur");
+                setloading("noloader")
+                seteditPopup(false);
+                setvalues(false);
+                window.location.reload();
+            });
+
+
+
         }
         else {
             setvalues(true);
